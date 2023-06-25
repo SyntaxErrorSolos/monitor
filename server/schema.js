@@ -1,11 +1,15 @@
 let { model, models, Schema } = require("mongoose");
 
 module.exports =
-  models.art ||
+  models.accounts ||
   model(
-    "art",
+    "accounts",
     new Schema({
-      User: String,
-      Image: { type: Image },
+      Username: String,
+      Password: String,
+      Email: String,
+      UserID: String,
+      Websites: Array,
+      Premium: {  type: Boolean, default: false  }
     })
   );

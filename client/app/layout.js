@@ -1,17 +1,20 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import { Lexend_Deca } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const lexend = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "900"],
+});
 
 export const metadata = {
-  title: 'Artistic',
-  description: 'Let\'s share art.',
-}
+  title: "Monitor",
+  description: "Create simple and easy to manage alerts for your website!",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lexend.className}>{children}</body>
     </html>
-  )
+  );
 }
